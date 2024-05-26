@@ -1,0 +1,120 @@
+---
+import { Image } from 'astro:assets';
+import ScheggiaMachine from '../../assets/scheggia_machine.svg';
+import './Main.css';
+import InvisibleButton from '../../components/InvisibleButton/InvisibleButton';
+---
+
+<html lang="en">
+    <head>
+        <title>My Homepage</title>
+    </head>
+    <body>
+        <!-- Top -->
+        <div class="main__screen--top">
+            <div class="btn__group">
+                <button type="button" class="btn btn--single ui__changable"
+                    >AUTO.</button
+                >
+                <button type="button" class="btn btn--single ui__changable"
+                    >LEIM PIMPE</button
+                >
+            </div>
+            <p class="speed__indicator">0</p>
+            <div class="empty"></div>
+        </div>
+
+        <!-- Middle -->
+        <div class="main__screen--middle">
+            <div class="laminating__work--btn">
+                <InvisibleButton link={'../LaminatingWork/LaminatingWork'} />
+            </div>
+            <div class="carrier__sheet__feeder--btn">
+                <InvisibleButton
+                    link={'../CarrierSheetFeeder/CarrierSheetFeeder'}
+                />
+            </div>
+            <div class="settings--btn">
+                <InvisibleButton link={'../Settings/Settings'} />
+            </div>
+            <div class="sheet__feeder--btn">
+                <InvisibleButton link={'../SheetFeeder/SheetFeeder'} />
+            </div>
+            <Image src={ScheggiaMachine} alt="scheggia machine" />
+        </div>
+
+        <!-- Bottom -->
+        <div class="main__screen--bottom">
+            <div class="top__btns">
+                <button type="button" class="ui__changable">IDLE</button>
+                <button type="button" class="ui__changable">START</button>
+                <button type="button" class="ui__changable">FEEDER BELT</button>
+                <div class="speed__controlers">
+                    <button type="button">
+                        <div class="btn__minus"></div>
+                    </button>
+                    <div class="speed__controlers--indicator">
+                        <p>DBA. SPEED</p>
+                        <input type="text" placeholder="4800" disabled />
+                    </div>
+                    <button type="button">
+                        <div class="btn__plus"></div>
+                    </button>
+                </div>
+                <button type="button" class="ui__changable">FEEDER</button>
+            </div>
+
+            <!-- Mid Btns -->
+            <div class="mid__btns">
+                <button type="button" class="mid__btns--lft">PRESSBAND</button>
+                <button type="button" class="mid__btns--cntr">COUNTER</button>
+            </div>
+
+            <!-- Btm Btns -->
+            <div class="btm__btns">
+                <button type="button" class="btn__triangle__left">
+                    <div class="triangle_left"></div>
+                </button>
+                <button type="button" class="btn__triangle__right">
+                    <div class="triangle_right"></div>
+                </button>
+                <button type="button">
+                    <div class="btn__minus"></div>
+                </button>
+                <button type="button" class="pressband__speed"></button>
+                <button type="button">
+                    <div class="btn__plus"></div>
+                </button>
+                <button type="button" class="btn__fastforward">
+                    <div class="triangle_right"></div>
+                    <div class="triangle_right"></div>
+                </button>
+                <button type="button" class="pressband__run--btn ui__changable"
+                    >RUN</button
+                >
+                <div class="counter--indicator">
+                    <input
+                        type="text"
+                        id="counter--indicator"
+                        placeholder="0"
+                        disabled
+                    />
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<style></style>
+
+<script>
+    const allButtons = document.querySelectorAll('button');
+
+    allButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            if (button.classList.contains('ui__changable')) {
+                button.classList.toggle('button--selected');
+            }
+        });
+    });
+</script>

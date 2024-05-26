@@ -1,0 +1,71 @@
+---
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+
+import { ViewTransitions } from 'astro:transitions';
+import '../styles/global.css';
+import './Layout.css';
+import FullScreenIcon from '../components/FullScreenIcon';
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+
+        <!-- Icons -->
+        <link
+            href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+            rel="stylesheet"
+        />
+        <!-- Fonts -->
+        <!-- --- Bebas --- -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+            rel="stylesheet"
+        />
+        <!-- --- Anton --- -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+            rel="stylesheet"
+        />
+        <!-- --- Share Tech --- -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+            rel="stylesheet"
+        />
+        <ViewTransitions />
+    </head>
+    <body>
+        <main class="main__screen" transition:animate="fade">
+            <p class="panel__header">
+                QUICKPANEL <div class="slanted__sqr1"></div><div
+                    class="slanted__sqr2"
+                >
+                </div><div class="slanted__sqr3"></div>
+            </p>
+            <p class="panel__footer">Pro-face</p>
+            <div class="on__dot"></div>
+
+            <section class="main__screen--slot">
+                <slot />
+            </section>
+        </main>
+
+        <FullScreenIcon client:only />
+    </body>
+</html>
