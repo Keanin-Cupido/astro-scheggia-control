@@ -1,0 +1,42 @@
+---
+const { text } = Astro.props;
+---
+
+<button type="button" class="laminating__work--btn ui__changable">
+    {text}
+</button>
+
+<script>
+    const allButtons = document.querySelectorAll('button');
+
+    allButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            if (button.classList.contains('ui__changable')) {
+                button.classList.toggle('button--selected');
+            }
+        });
+    });
+</script>
+
+<style>
+    .laminating__work--btn {
+        width: 100%;
+        max-width: 20vw;
+        height: 100%;
+        min-height: 10vh;
+        padding: 1em 0.5em;
+        text-align: center;
+    }
+    .button--selected {
+        background: #060501f0;
+        color: var(--cl-main);
+        border-top: 6px solid var(--cl-main-faded);
+        border-left: 6px solid var(--cl-main-faded);
+        border-right: 6px solid var(--cl-main);
+        border-bottom: 6px solid var(--cl-main);
+        border-style: outset;
+    }
+    button.button--selected:hover {
+        background-color: #000000c7;
+    }
+</style>

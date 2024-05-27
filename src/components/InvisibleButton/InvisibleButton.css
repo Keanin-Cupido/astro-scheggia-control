@@ -5,9 +5,3 @@
     background-color: transparent;
     cursor: pointer;
 }
-.invisible__btn:hover {
-    border-radius: 25px;
-    opacity: 0.1;
-    background-color: hsl(51, 95%, 25%);
-    box-shadow: 0px 0px 50px hsl(51, 95%, 50%);
-}

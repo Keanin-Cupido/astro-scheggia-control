@@ -197,7 +197,7 @@
 .btm__btns > button {
     width: fit-content;
     height: 15px;
-    padding: 1.25em 0.45em;
+    padding: 1.25em 0.2em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -205,12 +205,28 @@
 .btm__btns .btn__triangle__left,
 .btm__btns .btn__triangle__right {
     width: auto;
-    padding: 1.25em 0.45em;
+    padding: 1.25em 0.25em;
 }
-.btm__btns .btn__minus {
+
+.btm__btns button .btn__white--bg {
+    background: rgba(255, 235, 119, 0.6);
+    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.45);
+}
+.btm__btns button .btn__white--bg .triangle_left {
+    transform: scale(0.65);
+}
+.btm__btns button .btn__white--bg .triangle_right {
+    transform: scale(0.65);
+}
+
+.btm__btns button .btn__minus {
     width: 37px;
     height: 7px;
     background: #1e1e1e;
+    margin: 1em 0.1em;
+}
+.btm__btns .btn__white--bg .btn__minus {
+    transform: scale(0.75);
 }
 .btm__btns .btn__plus {
     width: 37px;
@@ -219,6 +235,10 @@
     position: relative;
     display: grid;
     place-items: center;
+    margin: 1em 0.1em;
+}
+.btm__btns .btn__white--bg .btn__plus {
+    transform: scale(0.75);
 }
 .btm__btns .btn__plus:after {
     content: '';
@@ -236,19 +256,14 @@
     flex: 1;
     padding: 1.25em 0.45em;
 }
-.btm__btns .btn__fastforward {
-    width: 47px;
+.btm__btns .btn__fastforward .btn__white--bg {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
-.btm__btns .btn__fastforward > .triangle_right {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 10px 0 10px 16.6px;
-    border-color: transparent transparent transparent #111111;
+.btm__btns .btn__fastforward .btn__white--bg:last-child {
+    padding-right: -1em;
 }
 .btm__btns .counter--indicator {
     width: 25.5%;

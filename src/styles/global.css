@@ -1,7 +1,7 @@
 :root {
     --cl-main: #f4b02a;
     --cl-main-light: #ffd941;
-    --cl-main-hover: hsl(45, 90%, 60%);
+    --cl-main-hover: hsl(45, 100%, 66%);
     --cl-main-faded: hsl(45, 90%, 20%);
 }
 *, *::before, *::after { box-sizing: border-box;}
@@ -39,7 +39,6 @@ button {
       background-repeat: repeat/no-repeat; */
   box-shadow: 1px 1px 5px hsla(51, 95%, 15%, 0.5);
   cursor: pointer;
-  transition: all 0.1s ease;
   padding-block: 0px;
   padding-inline: 0px;
 }
@@ -51,22 +50,19 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.1s ease;
 }
 button:hover {
   background-color: var(--cl-main-hover);
 }
 .button--selected {
-  background: transparent;
+  background: #ffd52f09;
   color: var(--cl-main);
   border-top: 6px solid var(--cl-main-faded);
   border-left: 6px solid var(--cl-main-faded);
   border-right: 6px solid var(--cl-main);
   border-bottom: 6px solid var(--cl-main);
   border-style: outset;
-  transition: all 0.2s ease;
 }
 button.button--selected:hover {
-  background-color: var(--cl-main);
-  color: #131313;
+  background-color: #f4b12a4f;
 }

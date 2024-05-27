@@ -1,11 +1,38 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import MenuLayout from '../../layouts/MenuLayout.astro';
+import RollerSpeedController from '../../components/RollerSpeedController/RollerSpeedController';
+import PrintSheetWaitingTimeController from '../../components/PrintSheetWaitingTimeController/PrintSheetWaitingTimeController';
+import LamButton from '../../components/Button/LamButton.astro';
 import './LaminatingWork.css';
 ---
 
 <Layout title="Scheggia: Laminating Work">
     <MenuLayout heading="LAMINATING WORK">
-        <h3>Content</h3>
+        <h2>ROLLER SPEED m/min.</h2>
+        <RollerSpeedController />
+        <h2>PRINT SHEET WAITING TIME</h2>
+        <PrintSheetWaitingTimeController />
+        <div class="laminating__work--btns">
+            <LamButton text="PULL MARK" />
+            <LamButton text="SINGLE STROKE" />
+            <LamButton text="PULL MARK HANDB." />
+        </div>
     </MenuLayout>
 </Layout>
+
+<style>
+    h1,
+    h2,
+    h3,
+    h4 {
+        margin: 0;
+        padding: 0;
+    }
+    .laminating__work--btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+    }
+</style>
