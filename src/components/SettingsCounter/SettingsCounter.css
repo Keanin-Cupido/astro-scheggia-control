@@ -1,0 +1,35 @@
+.settings__counter {
+	width: 100%;
+    color: #131313;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 0.25em;
+}
+.settings__counter--container {
+	width: 100%;
+	background: var(--cl-main);
+	padding: 1.5em;
+    border: 3px outset var(--cl-main-hover);
+}
+.settings__counter > p.settings__counter--name {
+	font-size:  1.5rem;
+	color: black;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.settings__counter--container > input {
+	max-width: 300px;
+	background: #101010;
+	padding: 0.5em 0.2em;
+	color: var(--cl-main);
+	font-family: inherit;
+	font-size: 2rem;
+	color: var(--cl-main);
+	text-align: right;
+	padding-right: 1em;
+	border: 0;
+	outline: 0;
+	letter-spacing: 2px;
+}

@@ -1,11 +1,44 @@
 ---
+import ButtonNav from '../../components/ButtonNav/ButtonNav.astro';
 import Layout from '../../layouts/Layout.astro';
+import SettingsCounter from '../../components/SettingsCounter/SettingsCounter';
+import LamButton from '../../components/Button/LamButton.astro';
 import './Settings.css';
 ---
 
 <Layout title="Scheggia: Settings">
-    <h1>Settings</h1>
-    <button><a href="../">back</a></button>
+    <div class="settings__container">
+        <div class="settings__nav">
+            <div class="settings__nav--back">
+                <ButtonNav link="../" direction="left" />
+            </div>
+            <div class="settings__nav--history">
+                <ButtonNav link="../" direction="right" />
+            </div>
+        </div>
+        <div class="settings__main">
+            <div class="settings__main--top">
+                <div class="empty"> </div>
+                <div class="settings__counter--laminating">
+                    <SettingsCounter name="printed sheet counter" initial={0} />
+                </div>
+                <div class="lam__button">
+                    <LamButton text="counter reset" />
+                </div>
+            </div>
+
+            <div class="settings__main--bottom">
+                <div class="language">Sprache</div>
+                <div class="settings__counter--laminating">
+                    <SettingsCounter name="total counter" initial={3012648} />
+                </div>
+                <div class="button__group">
+                    <ButtonNav link="../" direction="right" />
+                    <ButtonNav link="../" direction="right" />
+                </div>
+            </div>
+        </div>
+    </div>
 </Layout>
 
 <script></script>

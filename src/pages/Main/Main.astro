@@ -5,12 +5,8 @@ import './Main.css';
 import InvisibleButton from '../../components/InvisibleButton/InvisibleButton';
 ---
 
-<html lang="en">
-    <head>
-        <title>My Homepage</title>
-    </head>
-    <body>
-        <!-- Top -->
+<body class="main__screen--body">
+    <!-- Top -->
         <div class="main__screen--top">
             <div class="btn__group">
                 <button type="button" class="btn btn--single ui__changable"
@@ -24,7 +20,7 @@ import InvisibleButton from '../../components/InvisibleButton/InvisibleButton';
             <div class="empty"></div>
         </div>
 
-        <!-- Middle -->
+    <!-- Middle -->
         <div class="main__screen--middle">
             <div class="laminating__work--btn">
                 <InvisibleButton link={'../LaminatingWork/LaminatingWork'} />
@@ -51,14 +47,18 @@ import InvisibleButton from '../../components/InvisibleButton/InvisibleButton';
                 <button type="button" class="ui__changable">FEEDER BELT</button>
                 <div class="speed__controlers">
                     <button type="button">
-                        <div class="btn__minus"></div>
+                        <div class="btn__white--bg">
+                            <div class="btn__minus"></div>
+                        </div>
                     </button>
                     <div class="speed__controlers--indicator">
                         <p>DBA. SPEED</p>
                         <input type="text" placeholder="4800" disabled />
                     </div>
                     <button type="button">
-                        <div class="btn__plus"></div>
+                        <div class="btn__white--bg">
+                            <div class="btn__plus"></div>
+                        </div>
                     </button>
                 </div>
                 <button type="button" class="ui__changable">FEEDER</button>
@@ -70,7 +70,7 @@ import InvisibleButton from '../../components/InvisibleButton/InvisibleButton';
                 <button type="button" class="mid__btns--cntr">COUNTER</button>
             </div>
 
-            <!-- Btm Btns -->
+    <!-- Btm Btns -->
             <div class="btm__btns">
                 <!-- <button type="button" class="btn__triangle__left">
                     <div class="triangle_left"></div>
@@ -115,8 +115,7 @@ import InvisibleButton from '../../components/InvisibleButton/InvisibleButton';
                 </div>
             </div>
         </div>
-    </body>
-</html>
+</body>
 
 <style></style>
 

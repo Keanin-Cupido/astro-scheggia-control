@@ -1,0 +1,74 @@
+.settings__container {
+	width:  100%;
+	height: 100%;
+	padding: 1em;
+    min-height: 542px;
+    background: var(--cl-main);
+    border: 10px outset var(--cl-main-hover);
+    color: #131313;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3em;
+}
+.settings__nav {
+	width:  100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* Settings Main */
+.settings__main {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 2em;
+}
+
+/* Settings Main Top */
+.settings__main--top {
+	width: 100%;
+/* 	display: flex;
+	align-items: flex-end;
+	justify-content: space-between; */
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.settings__main--top .settings__counter--laminating {
+	width: fit-content;
+}
+.settings__main--top .lam__button {
+	align-self: end;
+	justify-self: end;
+}
+
+
+/* Settings Main Bottom */
+.settings__main--bottom {
+	width: 100%;
+/* 	display: flex;
+	align-items: flex-end;
+	justify-content: space-between; */
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.settings__main--bottom .language {
+	display: flex;
+	flex-direction: column;
+	align-self: flex-end;
+	justify-self: flex-start;
+	gap: 1em;
+}
+.settings__main--bottom .settings__counter--laminating {
+	width: fit-content;
+}
+.settings__main--bottom .button__group {
+	display: flex;
+	align-items: flex-end;
+	justify-self: flex-end;
+	gap: 3em;
+}
