@@ -1,7 +1,7 @@
 .menu__layout--container {
     width: 100%;
     height: 100%;
-    max-height: 542px;
+    min-height: 542px;
     background: var(--cl-main);
     border: 10px outset var(--cl-main-hover);
     color: #131313;
@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 1em;
 }
 
@@ -52,13 +52,14 @@
 /* ===== Menu Layout Main ===== */
 .menu__layout--container .menu__layout--main {
     width: 100%;
-    height: 100%;
+    height: auto;
     background: #f6b430;
     border: 3px inset var(--cl-main-hover);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex: 1;
     gap: 1em;
     padding: 1em;
 }
