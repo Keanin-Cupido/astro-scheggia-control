@@ -10,9 +10,9 @@ import './LaminatingWork.css';
 <Layout title="Scheggia: Laminating Work">
     <MenuLayout heading="LAMINATING WORK">
         <h2>ROLLER SPEED m/min.</h2>
-        <RollerSpeedController />
+        <RollerSpeedController client:only />
         <h2>PRINT SHEET WAITING TIME</h2>
-        <PrintSheetWaitingTimeController />
+        <PrintSheetWaitingTimeController client:only />
         <div class="laminating__work--btns">
             <LamButton text="PULL MARK" />
             <LamButton text="SINGLE STROKE" />

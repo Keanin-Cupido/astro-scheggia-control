@@ -18,14 +18,14 @@
 .main__screen--top .btn__group {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
     gap: 1em;
     margin: 0;
     padding: 0;
 }
 .main__screen--top .speed__indicator {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin: 0;
     padding: 0;
 }
