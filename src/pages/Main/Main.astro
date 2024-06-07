@@ -9,12 +9,15 @@ import InvisibleButton from '../../components/InvisibleButton/InvisibleButton';
 <body class="main__screen--body">
     <div class="main__screen--top">
         <div class="btn__group">
-            <button type="button" class="btn btn--single ui__changable"
-                >AUTO.</button
+            <button type="button" class="btn btn--single ui__changable">
+                AUTO.
+            </button>
+            <button
+                type="button"
+                class="btn btn--single ui__changable button--selected"
             >
-            <button type="button" class="btn btn--single ui__changable"
-                >LEIM PIMPE</button
-            >
+                LEIM PIMPE
+            </button>
         </div>
         <p class="speed__indicator">0</p>
         <div class="empty"></div>
@@ -41,8 +44,12 @@ import InvisibleButton from '../../components/InvisibleButton/InvisibleButton';
     <div class="main__screen--bottom">
         <div class="top__btns">
             <button type="button" class="ui__changable">IDLE</button>
-            <button type="button" class="ui__changable">START</button>
-            <button type="button" class="ui__changable">FEEDER BELT</button>
+            <button type="button" class="ui__changable button--selected"
+                >START</button
+            >
+            <button type="button" class="ui__changable button--selected"
+                >FEEDER BELT</button
+            >
             <div class="speed__controlers">
                 <button type="button"><div class="btn__minus"></div></button>
                 <div class="speed__controlers--indicator">
@@ -51,7 +58,9 @@ import InvisibleButton from '../../components/InvisibleButton/InvisibleButton';
                 </div>
                 <button type="button"><div class="btn__plus"></div></button>
             </div>
-            <button type="button" class="ui__changable">FEEDER</button>
+            <button type="button" class="ui__changable button--selected"
+                >FEEDER</button
+            >
         </div>
 
         <div class="mid__btns">

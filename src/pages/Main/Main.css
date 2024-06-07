@@ -274,10 +274,10 @@
     align-items: center;
     justify-content: center;
     background-color: var(--cl-main);
-    border-top: 6px solid #dadada75;
-    border-left: 6px solid #e0e0e08d;
-    border-right: 6px solid #1e1e1e63;
-    border-bottom: 6px solid #1414146d;
+    border-top: 5px solid #dadada75;
+    border-left: 5px solid #e0e0e08d;
+    border-right: 5px solid #1e1e1e63;
+    border-bottom: 5px solid #1414146d;
     box-shadow: 0px 0px 15px hsl(51, 90%, 15%);
 }
 

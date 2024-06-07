@@ -30,10 +30,10 @@ button {
   font-family: inherit;
   font-size: 1.05rem;
   font-weight: 400;
-  border-top: 6px solid #dadada75;
-  border-left: 6px solid #e0e0e08d;
-  border-right: 6px solid #1e1e1e63;
-  border-bottom: 6px solid #1414146d;
+  border-top: 5px solid #dadada75;
+  border-left: 5px solid #e0e0e08d;
+  border-right: 5px solid #1e1e1e63;
+  border-bottom: 5px solid #1414146d;
   background-color: var(--cl-main);
   /* background-image: url("../assets/textures/cream-pixels.png");
       background-repeat: repeat/no-repeat; */
@@ -57,10 +57,10 @@ button:hover {
 .button--selected {
   background: #ffd52f09;
   color: var(--cl-main);
-  border-top: 6px solid var(--cl-main-faded);
-  border-left: 6px solid var(--cl-main-faded);
-  border-right: 6px solid var(--cl-main);
-  border-bottom: 6px solid var(--cl-main);
+  border-top: 5px solid var(--cl-main-faded);
+  border-left: 5px solid var(--cl-main-faded);
+  border-right: 5px solid var(--cl-main);
+  border-bottom: 5px solid var(--cl-main);
   border-style: outset;
 }
 button.button--selected:hover {
